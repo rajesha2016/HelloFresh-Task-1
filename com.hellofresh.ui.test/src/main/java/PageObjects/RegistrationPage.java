@@ -12,6 +12,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * @author r.moharana
+ * this class helps in registering a new user and it activities
+ */
 public class RegistrationPage {
 	
 	WebDriver driver;
@@ -76,7 +80,7 @@ public class RegistrationPage {
 	private WebElement registerButton;
 	
 	
-	
+	// method to enter new email address for new user
 	public void enter_UserEmailAddress(){
 		
 		if(newEmailAddress.isDisplayed()) newEmailAddress.sendKeys(user_EmailAddress);
@@ -86,51 +90,56 @@ public class RegistrationPage {
 		}
 	}
 	
+	//method to click on create account button to fill personal details
 	public void click_CreateAccountButton(){
 		
 		createAccountButton.click();
 	}
 	
+	//enter the first name in the personal details page
 	public void enter_FirstName(String firstName){
 		
 		if(userFirstName.isDisplayed()) userFirstName.sendKeys(firstName);
 	}
 	
+	//enter the last name in the personal details page
 	public void enter_LastName(String lastName){
 		
 		if(userLastName.isDisplayed()) userLastName.sendKeys(lastName);
 	}
 	
+	//enter the password in the personal details page
 	public void enter_Password(){
 		
 		if(userPassword.isDisplayed()) userPassword.sendKeys(user_Password);
 	}
 	
+	//enter the street address in the personal details page
 	public void enter_StreetAddress(String streetAddress){
 		
 		if(UserStreetAddress.isDisplayed()) UserStreetAddress.sendKeys(streetAddress);
 	}
 	
+	//enter the city name in the personal details page
 	public void enter_CityName(String cityName){
 		
 		if(userCityName.isDisplayed()) userCityName.sendKeys(cityName);
 	}
 	
+	//enter the postal code in the personal details page
 	public void enter_PostalCode(String postCode){
 		
 		if(userPostalCode.isDisplayed()) userPostalCode.sendKeys(postCode);
 	}
+	
+	//enter the mobile number in the personal details page
 	public void enter_MobileNumber(String mobileNumber){
-	
-	if(userMobileNumber.isDisplayed()) userMobileNumber.sendKeys(mobileNumber);
-	}
-	
-	public void enter_AliasAddress(String aliasAdd){
 		
-		if(userAliasAddress.isDisplayed()) userAliasAddress.sendKeys(aliasAdd);
+		if(userMobileNumber.isDisplayed()) userMobileNumber.sendKeys(mobileNumber);
 	}
 	
 	
+	//select date of the birth from drop down
 	public void select_DateOfBirth(){
 		
 		Select bDay=new Select(days);
@@ -143,6 +152,7 @@ public class RegistrationPage {
 		bYear.selectByValue("1988");
 	}
 	
+	// select state from drop down
 	public void select_State(){
 		
 		Select state=new Select(userState);
@@ -150,6 +160,7 @@ public class RegistrationPage {
 		
 	}
 	
+	//enter the country in the personal details page
 	public void select_Country(){
 		
 		Select country=new Select(userCountry);
@@ -157,6 +168,7 @@ public class RegistrationPage {
 		
 	}
 	
+	// click on register button to register the user
 	public void click_RegisterButton(){
 		
 		if(registerButton.isDisplayed()) registerButton.click();

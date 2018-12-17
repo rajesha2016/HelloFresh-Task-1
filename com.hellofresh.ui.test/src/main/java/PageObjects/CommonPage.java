@@ -11,6 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import FrameworkLibraries.FileReaderLibrary;
 
+/**
+ * @author r.moharana
+ * this class helps in user common activities
+ * 
+ */
 public class CommonPage {
 	
 	WebDriver driver;
@@ -29,7 +34,7 @@ public class CommonPage {
 	@FindBy(how=How.CSS, using="a.logout")
 	private WebElement signoutButton;
 	
-	
+	//method to click sign in button on application login page
 	public void click_SigninButton(){
 		
 		if(signinButton.isDisplayed()) signinButton.click();
@@ -41,18 +46,16 @@ public class CommonPage {
 		
 	}
 
+	//method to navigate to specified application using url mentioned in properties file
 	public void navigateTo_LoginPage(){
 		
 		driver.get(FileReaderLibrary.getInstance().getConfigReader().getApplicationUrl());
 	}
 	
+	//method to click sign out button
 	public void click_SingOutButton(){
 		
-		signoutButton.click();
-		
-		if(signinButton.isDisplayed()) {
-			System.out.println("User sign out successfully");
-		}
+		if(signoutButton.isDisplayed()) signoutButton.click();
 		
 	}
 

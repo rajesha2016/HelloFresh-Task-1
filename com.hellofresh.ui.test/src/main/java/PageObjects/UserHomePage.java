@@ -10,6 +10,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * @author r.moharana
+ * steps for the user home page activities
+ */
 public class UserHomePage {
 	
 	WebDriver driver;
@@ -36,27 +40,24 @@ public class UserHomePage {
 	@FindBy(how=How.CLASS_NAME,using="info-account")
 	private WebElement welcomeMessage;
 	
-	public boolean verify_MyAccount(){
-		
+	//method to verify account header text and current url 
+	public boolean verify_MyAccount(){		
 		
 		if(driver.getCurrentUrl().contains("controller=my-account") && myAccountHeaderText.getText().equals("MY ACCOUNT")){
-			System.out.println("User Account successfully validated");
 			return true;
 		}
-		else return false;
-		
+		else return false;		
 	}
 	
+	//method to verify welcome message text after login
 	public boolean verify_WelcomeMessage(){
 		
-		
 		if(welcomeMessage.getText().contains(("Welcome to your account.")))return true;
-		return false;
-		
+		return false;		
 	}
 	
+	//verify logged in user name on user home page and return the boolean value
 	public boolean verify_UserNameonHomePage(String firstName, String lastName){
-		
 		
 		if(userAccountName.getText().contains(firstName+" "+lastName)){
 			
@@ -66,11 +67,13 @@ public class UserHomePage {
 		return false;
 	}
 	
+	//click on women button to shop
 	public void click_WomenButton(){
 		
 		if(womenButton.isDisplayed()) womenButton.click();
 	}
 	
+	//select dress based on the product name
 	public void select_Dress(String productName){
 		
 		List<WebElement> productList=driver.findElements(By.className("product-name"));

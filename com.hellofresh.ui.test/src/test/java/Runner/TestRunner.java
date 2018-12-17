@@ -11,15 +11,23 @@ import FrameworkLibraries.FileReaderLibrary;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
+/**
+ * @author r.moharana
+ * This class is the main runner class of feature files
+ */
 @RunWith(Cucumber.class)
-@CucumberOptions(features="Features", 
-				glue={"stepDefinitions"},
+@CucumberOptions(features="CucumberFeatureFile", 
+				glue={"StepDefinitions"},
 				plugin={"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+				tags={"@newUserRegistration, @UserLogin, @OrderCheckout"},
 				dryRun=false, 
 				monochrome=true
 				)
 public class TestRunner {
 	
+	/**
+	 * extent report path set up
+	 */
 	@AfterClass
 	public static void writeExtentReport(){
 		

@@ -7,6 +7,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * @author r.moharana
+ * this class helps in existing user login activity
+ */
 public class LoginPage {
 	
 	WebDriver driver;
@@ -29,18 +33,20 @@ public class LoginPage {
 	private WebElement loginInButton;
 	
 	
-	
+	//method to enter existing email address
 	public void enter_UserEmailAddress(){
 		
 		userEmailAddress.sendKeys(RegistrationPage.user_EmailAddress);
 		
 	}
 	
+	//method to enter valid password
 	public void enter_UserPassword(){
 		
 		userPasswordAddress.sendKeys(RegistrationPage.user_Password);
 	}
 	
+	//method to click on Login button to navigate to user home page
 	public void click_SignInButton(){
 		
 		loginInButton.click();

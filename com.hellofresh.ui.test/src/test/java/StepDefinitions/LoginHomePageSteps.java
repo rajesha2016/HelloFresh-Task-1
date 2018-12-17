@@ -1,9 +1,15 @@
 package StepDefinitions;
 
+import com.cucumber.listener.Reporter;
+
 import CucumberContext.TestContext;
 import PageObjects.LoginPage;
 import cucumber.api.java.en.And;
 
+/**
+ * @author r.moharana
+ * existing user login related steps methods
+ */
 public class LoginHomePageSteps {
 	
 	LoginPage loginPage;
@@ -16,12 +22,11 @@ public class LoginHomePageSteps {
 	}
 	
 	
-	
-	
 	@And("^I enter my registered email$")
 	public void i_enter_registered_email() throws Throwable {
 	    
 		loginPage.enter_UserEmailAddress();
+		Reporter.addStepLog("User enter registered email address");
 	    
 	}
 
@@ -29,6 +34,7 @@ public class LoginHomePageSteps {
 	public void i_enter_valid_password() throws Throwable {
 	    
 		loginPage.enter_UserPassword();	    
+		Reporter.addStepLog("User enter valid password to access account");
 	}
 	
 
@@ -36,6 +42,7 @@ public class LoginHomePageSteps {
 	public void i_click_on_login_button() throws Throwable {
 	    
 		loginPage.click_SignInButton();
+		Reporter.addStepLog("User click on the login button to navigate to user home page");
 	    
 	}
 

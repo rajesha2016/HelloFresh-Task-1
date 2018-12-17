@@ -9,12 +9,16 @@ import java.util.Properties;
 import Enums.DriverType;
 import Enums.EnvironmentType;
 
+/**
+ * @author r.moharana
+ * This class helps to get properties file data and supply to scripts
+ */
 public class ConfigFileReader {
 	
-	private Properties properties;
+	 private Properties properties;
 	 private final String propertyFilePath= "Config/Configuration.properties";
 	 
-	 
+	 //constructor to initialize properties
 	 public ConfigFileReader(){
 		 
 		 BufferedReader reader;
@@ -33,7 +37,7 @@ public class ConfigFileReader {
 	 	 } 
 	 }
 	 
-	 
+	 //method to get implicit wait from properties file
 	 public long getImplicitlyWait() {
 		 
 		 String implicitlyWait = properties.getProperty("implicitlyWait");
@@ -41,6 +45,7 @@ public class ConfigFileReader {
 		 else throw new RuntimeException("implicitlyWait not specified in the configuration.properties file.");
 	 }
 	 
+	 //method to get application url from properties file
 	 public String getApplicationUrl() {
 		 
 		 String url = properties.getProperty("url");
@@ -48,6 +53,7 @@ public class ConfigFileReader {
 		 else throw new RuntimeException("url not specified in the configuration.properties file.");
 	 }
 	 
+	//method to get browser type from properties file
 	 public DriverType getBrowser() {
 		 
 		 String browserName = properties.getProperty("browser");
@@ -57,6 +63,7 @@ public class ConfigFileReader {
 		 else throw new RuntimeException("Browser Name Key value in configuration.properties is not matched : " + browserName);
 	 }
 		 
+	//method to get environment type from properties file 
 	public EnvironmentType getEnvironment() {
 		
 		 String environmentName = properties.getProperty("environment");
@@ -65,6 +72,7 @@ public class ConfigFileReader {
 		 else throw new RuntimeException("Environment Type Key value in Configuration.properties is not matched : " + environmentName);
 	}
 		 
+	//method to get browser window size to maximize from properties file
 	public Boolean getBrowserWindowSize() {
 		
 		 String windowSize = properties.getProperty("windowMaximize");
@@ -72,11 +80,12 @@ public class ConfigFileReader {
 		 return true;
 	}
 	
+	//method to get report path from properties file
 	public String getReportConfigPath(){
 		 
 		 String reportConfigPath = System.getProperty("user.dir")+properties.getProperty("reportConfigPath");
 		 if(reportConfigPath!= null) return reportConfigPath;
 		 else throw new RuntimeException("Report config path not specfied in configuration.properties file");
-		}
+	}
 
 }

@@ -27,7 +27,6 @@ Scenario Outline:  Validate new customer can create account by entering all deta
 	|firstname   |lastname|street|city     |postalcode|handynummer|
 	|RajeshaKumar|Moharana|CSB   |Bangalore|22222     |9535380046 |
 	
-
 @UserLogin
 Scenario Outline: Validate existing customer can login to application with valid email and password
 	And I enter my registered email
@@ -42,7 +41,7 @@ Scenario Outline: Validate existing customer can login to application with valid
 	|RajeshaKumar|Moharana|
 	
 	
-@Checkout
+@OrderCheckout
 Scenario Outline: Verify user can order by checking out selected items
 	And I enter my registered email
 	And I enter valid password
@@ -65,4 +64,5 @@ Scenario Outline: Verify user can order by checking out selected items
 	Examples:
 	|productName				|
 	|Faded Short Sleeve T-shirts|
+
 	

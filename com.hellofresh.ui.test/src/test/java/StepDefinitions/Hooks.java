@@ -14,6 +14,10 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
+/**
+ * @author r.moharana
+ * cucumber hooks class helps in setting up before scenario and after scenario activities
+ */
 public class Hooks {
 	
 TestContext testContext;
@@ -28,6 +32,11 @@ TestContext testContext;
 		Reporter.assignAuthor(" Rajesha Kumar Moharana ");
 	}
 	
+	/**
+	 * @param Scenario
+	 * take screenshot in case of failed scenario and store it in mentioned folder
+	 * also attach the screenshot with extent report
+	 */
 	@After
 	public void afterScenario(Scenario scenario){
 		
@@ -47,7 +56,7 @@ TestContext testContext;
 			 //This attach the specified screenshot to the test
 			 Reporter.addScreenCaptureFromPath(destinationPath.toString());
 			 } catch (IOException e) {
-				 
+				 e.printStackTrace();
 			 } 
 		}
 		
