@@ -11,7 +11,7 @@ import Enums.EnvironmentType;
 
 /**
  * @author r.moharana
- * This class helps to get properties file data and supply to scripts
+ * This class helps to get properties file data and supply to UI scripts
  */
 public class ConfigFileReader {
 	
