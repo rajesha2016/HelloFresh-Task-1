@@ -10,6 +10,8 @@ This framework uses Selenium WebDriver-Cucumber-Junit-Maven with Page Object Mod
 
 •	Src/main/java- contain all framework related file such as Page action, WebDriver factory, PageObjectLibrary, FileReaderLibrary, ConfigFileReader, Cucumber context.
 
+•	Test data logic is present inside Src/main/java > PageObject package for all pages.
+
 •	Src/test/java- contain framework runner class and step definition files.
 
 •	CucumberFeatureFile folder contain feature file, which is used to write business scenarios.
