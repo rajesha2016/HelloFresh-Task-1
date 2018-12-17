@@ -16,7 +16,7 @@ This framework uses Selenium WebDriver-Cucumber-Junit-Maven with Page Object Mod
 
 •	CucumberFeatureFile folder contain feature file, which is used to write business scenarios.
 
-•	Config folder contain properties file, properties file has all fixed value like URL name.
+•	Config folder contain Configuration.properties & extent-config.xml files. Properties file has all fixed value like URL name.
 
 
 ### Feature File:
