@@ -14,7 +14,7 @@ import FrameworkLibraries.FileReaderLibrary;
 /**
  * @author r.moharana
  * this class helps in user common activities
- * 
+ * common page: Object and behavior
  */
 public class CommonPage {
 	

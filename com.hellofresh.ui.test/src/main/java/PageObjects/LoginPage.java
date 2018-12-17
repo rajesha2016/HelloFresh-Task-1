@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * @author r.moharana
  * this class helps in existing user login activity
+ * login page: Object and behavior
  */
 public class LoginPage {
 	

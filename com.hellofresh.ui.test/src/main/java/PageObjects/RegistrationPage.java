@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * @author r.moharana
  * this class helps in registering a new user and it activities
+ * Registration page: Object and behavior
  */
 public class RegistrationPage {
 	

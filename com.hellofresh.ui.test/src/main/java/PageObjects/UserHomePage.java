@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * @author r.moharana
  * steps for the user home page activities
+ * UserHome page: Object and behavior
  */
 public class UserHomePage {
 	
