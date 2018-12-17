@@ -26,7 +26,7 @@ This framework uses Selenium WebDriver-Cucumber-Junit-Maven with Page Object Mod
 # How to Execute Test:
 
 ### Option#1:
-•	Close the project from GitHub: https://github.com/rajesha2016/HelloFresh-Task-1.git to your IDE( I have used Eclipse) 
+•	Clone the project from GitHub: https://github.com/rajesha2016/HelloFresh-Task-1.git to your IDE( I have used Eclipse) 
 
 •	Go to \src\test\java\Runner package
 
