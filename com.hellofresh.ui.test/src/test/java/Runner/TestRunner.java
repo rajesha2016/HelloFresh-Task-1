@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 
 /**
  * @author r.moharana
- * This class is the main runner class of feature files
+ * This class is the main runner class of test
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(features="CucumberFeatureFile", 
