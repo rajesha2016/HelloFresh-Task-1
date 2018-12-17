@@ -4,9 +4,9 @@
 
 This framework uses Selenium WebDriver-Cucumber-Junit-Maven with Page Object Model.
 
-•	For logging framework used com.cucumber.listener.Reporter and addStepLog(“”) method.
+•	For logging framework used com.cucumber.listener.Reporter and addStepLog("") method.
 
-•	For reporting extent report, which can be obtained “\target\cucumber-reports”.
+•	For reporting extent report, which can be obtained "\target\cucumber-reports".
 
 •	Src/main/java- contain all framework related file such as Page action, WebDriver factory, PageObjectLibrary, FileReaderLibrary, ConfigFileReader, Cucumber context.
 
@@ -20,7 +20,7 @@ This framework uses Selenium WebDriver-Cucumber-Junit-Maven with Page Object Mod
 
 
 ### Feature File:
-•	Cucumber feature file “HelloFreshUITask.feature” has all three business scenarios.
+•	Cucumber feature file "HelloFreshUITask.feature" has all three business scenarios.
 
 •	Scenarios are dependant as per the design and it will run sequentially.
 
@@ -78,6 +78,6 @@ This framework uses Selenium WebDriver-Cucumber-Junit-Maven with Page Object Mod
 
 •	For failed scenario inside Hooks.java class, if the scenario gets failed then it will capture the screenshot and will attach to the corresponding scenario step.
 
-•	Report generate inside “\target\cucumber-reports”.
+•	Report generate inside "\target\cucumber-reports".
 
 
